@@ -95,7 +95,7 @@ webapp.post('/login', async (req, res) => {
     await client.close();
   }
 });
-let mbg;
+
 
   //localStorage.setItem('userId', userId);
   webapp.get('/admin/users', async (req, res) => {
