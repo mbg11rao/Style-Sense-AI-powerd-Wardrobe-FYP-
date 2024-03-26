@@ -1,0 +1,34 @@
+/* Adjusting to match your NavBar component's structure */
+.navbar-container {
+  position: fixed; /* or absolute, depending on your layout */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* High value to ensure it's on top */
+  background: #fff; /* or any color that fits your design */
+}
+
+/* Add additional styling here to match your design */
+
+.navbar-button {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 1rem; /* Added to give some space around buttons */
+}
+
+.share-button {
+  font-weight: 400;
+}
+
+/* Assuming .navbar-button and .share-button together represent your navigation items */
+.navbar-button:hover, .share-button:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  /* Hide text buttons in mobile view, assuming you want to keep the share button visible */
+  .navbar-button {
+    display: none;
+  }
+}

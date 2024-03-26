@@ -1,0 +1,90 @@
+.footbar {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--ComponentAndTab, #fff3ef);
+  z-index: 100;
+}
+
+.footbar .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.footbar .button-container .icon {
+  width: 72px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footbar .button-container .selected-bar {
+  width: 72px;
+  height: 6px;
+  background: #FFA485;
+  box-shadow: 0px 4px 12px #FFCCBB;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.footbar .button-container .user-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.footbar .button-container .user-info .username-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #333; /* Dark text color for contrast */
+  cursor: pointer;
+  padding: 10px; /* Padding for clickable area */
+  border-radius: 22px; /* Rounded edges */
+  transition: all 0.3s;
+  text-transform: uppercase; /* Uppercase styling for the username */
+  font-weight: bold; /* Make the username bold */
+  letter-spacing: 1px; /* Increase spacing between letters */
+}
+
+.footbar .button-container .user-info:hover .username-btn {
+  background-color: #FFA485; /* Slightly highlight on hover */
+  color: white;
+}
+
+.footbar .button-container .user-info .dropdown-content {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.footbar .button-container .user-info:hover .dropdown-content {
+  display: block;
+}
+
+.footbar .button-container .user-info .dropdown-content button {
+  background: #FFA485;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; /* Ensure full width */
+  text-align: left; /* Align text to the left */
+}
+
+.footbar .button-container .user-info .dropdown-content button:hover {
+  background-color: #e5947f;
+}

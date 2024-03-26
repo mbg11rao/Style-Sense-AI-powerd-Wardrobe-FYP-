@@ -1,0 +1,23 @@
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+  background-color: #ffffff;
+  font-style: normal;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+/* App.css */
+.content-container {
+  padding-top: 70px; /* Use the actual height of your navbar plus some extra space */
+}
+

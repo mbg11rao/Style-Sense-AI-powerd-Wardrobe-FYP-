@@ -1,0 +1,108 @@
+.registration-container {
+    background: #FFFFFF;
+    max-width: 340px;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 80vh; /* Maximum height of the container */
+    overflow-y: auto; /* Enable scrollbar when content overflows */
+}
+
+
+/* ... other styles ... */
+
+/* Responsive Media Queries */
+@media only screen and (max-width: 600px) {
+.registration-container {
+    margin: 10px; /* Reduced lateral margins for smaller screens */
+    padding: 20px;
+}
+
+/* ... other responsive styles for max-width: 600px ... */
+}
+
+@media only screen and (max-width: 400px) {
+.registration-container {
+    margin: 10px; /* Further reduced lateral margins for extra small screens */
+    padding: 15px;
+}
+
+/* ... other responsive styles for max-width: 400px ... */
+}
+/* Error and Success Message Styling */
+/* ... error and success styles remain the same ... */
+
+.registration-form {
+    width: 100%;
+}
+
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+.registration-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 1px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.registration-form .password-requirements {
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5c6bc0;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.registration-form button:hover,
+.registration-form button:focus {
+    background-color: #3f51b5;
+}
+
+/* Error and Success Message Styling */
+.error-message, .success-message {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
