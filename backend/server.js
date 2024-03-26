@@ -686,6 +686,7 @@ webapp.post('/login', async (req, res) => {
         if (req.body.type === 'top' || req.body.type === 'outwear') {
             recommended_bottom_color1 = classificationResults.recommended_bottom_color1;
             recommended_shoes_color1 = classificationResults.recommended_shoes_color1;
+            console.log('recommended')
         } else {
             recommended_bottom_color1 = "Recommended colour is only for top or outwear";
             recommended_shoes_color1= "Recommended colour is only for top or outwear";
