@@ -266,8 +266,7 @@ webapp.post('/login', async (req, res) => {
     } catch (error) {
       console.error('Error:', error)
       res.status(500).json({ message: 'Internal Server Error' })
-    } finally {
-      client.close()
+    } 
     }
   })
 
@@ -360,9 +359,10 @@ webapp.post('/login', async (req, res) => {
     } catch (error) {
       console.error('Error:', error);
       res.status(500).json({ message: 'Internal Server Error' });
-    } finally {
-      client.close();
-    }
+    } 
+    // finally {
+    //   client.close();
+    // }
   });
 
   webapp.get('/outfit/delete/:id', async (req, res) => {
