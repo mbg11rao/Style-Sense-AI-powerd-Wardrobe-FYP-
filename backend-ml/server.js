@@ -382,7 +382,6 @@
 
     const event = req.params.event;
     const clothingId = req.params.id;
-    // Connect to MongoDB
     const client = new MongoClient(urlService);
 
     try {
@@ -423,7 +422,7 @@
     }
   });
 
-  // done
+  
   webapp.get('/outfits/regenerate/event/:event/id/:id/date/:date', async (req, res) => {
     // Extract year, month, and day from the string
     const year = req.params.date.slice(0, 4);
@@ -542,7 +541,6 @@
   })
 
 
-// Assuming you've already imported MongoClient from the MongoDB driver
 
 const client = new MongoClient(urlService);
 
@@ -550,7 +548,6 @@ webapp.post('/uploadImage', async (req, res) => {
     console.log("Received body for image upload:", req.body);
 
     try {
-        // MongoDB client is already initialized and connected, no need to connect again
         const collection = client.db('StyleSense').collection('Closet');
         const imageUrl = req.body.imageUrl; // This is your Cloudinary URL
         console.log("sending request to flask server:");
@@ -577,9 +574,8 @@ webapp.post('/uploadImage', async (req, res) => {
           recommended_bottom_color2 = "Recommended colour is only for top or outwear";
           recommended_shoes_color2 = "Recommended colour is only for top or outwear";
       }
-        console.log("sending data to mongodb:");
+        console.log("sending data to mongodb:", mongoID);
 
-        // Prepare document for MongoDB including image and classification data
         const document = {
             image_url: imageUrl, // Cloudinary URL
             brand_name: req.body.brand_names || "Self-taken",
@@ -620,8 +616,6 @@ webapp.post('/uploadImage', async (req, res) => {
   webapp.get('/clothes/delete/:id', async (req, res) => {
     const mongoId = req.params.id;
 
-    
-    // Connect to MongoDB
     const client = new MongoClient(urlService);
 
     try {
